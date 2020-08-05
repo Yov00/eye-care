@@ -4,7 +4,7 @@
   "description": "It reminds you to take a break from the monitor",
   "main": "main.js",
   "scripts": {
-    "start":"electron ."
+    "start": "electron ."
   },
   "author": "Yovelin Panayotov",
   "license": "MIT",
