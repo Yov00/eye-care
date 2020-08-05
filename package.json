@@ -1,0 +1,14 @@
+{
+  "name": "eyes-rest-helper",
+  "version": "1.0.0",
+  "description": "It reminds you to take a break from the monitor",
+  "main": "main.js",
+  "scripts": {
+    "start":"electron ."
+  },
+  "author": "Yovelin Panayotov",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.1.2"
+  }
+}
