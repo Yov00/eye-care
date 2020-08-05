@@ -24,7 +24,7 @@ function createWindow(width,height){
         icon:iconPath
     })
 
-    // Seting Tray
+    // Preparing Tray Icon
     let appIcon = null;
 
     // Loading the html file
