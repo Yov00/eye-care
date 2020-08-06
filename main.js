@@ -115,22 +115,22 @@ const mainMenuTemplate = [
         ]
         
     },
-    // {
-    //     label:'Developer Tools',
-    //     submenu:[
-    //         {
-    //             label:'Toggle DevTools',
-    //             accelerator: process.platform == 'darwin' ? `Command+I` : `Ctrl+I`,
+    {
+        label:'Developer Tools',
+        submenu:[
+            {
+                label:'Toggle DevTools',
+                accelerator: process.platform == 'darwin' ? `Command+I` : `Ctrl+I`,
 
-    //             click(item,focusedWindow){
-    //                 focusedWindow.toggleDevTools();
-    //             }
-    //         },
-    //         {
-    //             role:`reload`
-    //         }
-    //     ]
-    // }
+                click(item,focusedWindow){
+                    focusedWindow.toggleDevTools();
+                }
+            },
+            {
+                role:`reload`
+            }
+        ]
+    }
 ]
 
 ipcMain.on('excercises:open',()=>{
