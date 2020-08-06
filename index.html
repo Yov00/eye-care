@@ -109,10 +109,10 @@
             let minutes = enteredTime.value-1;
             let seconds  = 60;
             let displayMinutes = minutes < 10 ? `0${minutes}`:minutes;
-            clock.innerText = displayMinutes+': '+seconds;
 
             if(minutes>=0&&!timerStarted){
                 timerStarted = true;
+                clock.innerText = displayMinutes+' : '+seconds;
                 clock.classList.add('pulse-anim');
                 alarmPopup.style.display = 'none';
 
@@ -128,11 +128,11 @@
                         stopTheTimer();
                     }
                     else{
+                        seconds = 59;
                         minutes--;
-                        seconds = 60;
                         clock.innerText = displayMinutes+' : '+seconds;
                     }
-                },102);
+                },200);
             }
 
            function stopTheTimer(){
