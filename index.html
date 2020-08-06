@@ -88,7 +88,8 @@
         <div id="alarm-popup">
             Take a break now!
         </div>
-      
+        
+        <button id="excerciseBtn">Excercises</button>
     </div>
    
     <script>
@@ -148,6 +149,12 @@
 
             }
         }
+
+        const excerciseBtn = document.querySelector('#excerciseBtn');
+
+        excerciseBtn.addEventListener('click',()=>{
+            ipcRenderer.send('excercises:open');
+        })
     </script>
 </body>
 </html>

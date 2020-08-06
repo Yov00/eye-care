@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Care Excercises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html,body{
+            margin: 0;
+            padding:0;
+            font-family: 'Montserrat', sans-serif;
+            color:#695a58;
+        }
+        .excercises{
+            overflow: hidden;
+            height: 100vh;
+        }
+       .excercises figure{
+            display: flex;
+            margin:0;
+            margin-top: 50vh;
+            transform: translateY(-50%);
+            position: relative;
+            width: 1100%;
+            left:0;
+        }
+        .excercises >figure > div{
+            display: flex;
+            padding:20px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .excercise-container{
+
+        }
+        .excercise{
+            display: flex;
+            justify-content: space-around;
+            width: 800px;
+
+        }
+        .excercise>div{
+            flex:1;
+            padding: 20px;
+        }
+        .excercise-explanation{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+        }
+        /* .buttons{
+            position:absolute;
+            top:50%;
+            width: 960px;
+            left:50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        } */
+        .button1{
+            height: 100vh;
+            width: 10vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top:0;
+            left:0;
+
+            
+
+            background-color: white;
+            z-index:20;
+        }
+        .button2{
+            height: 100vh;
+            width: 10vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top:0;
+            right:0;
+            z-index:20;
+            background-color: white;
+        }
+        #prevBtn{
+            color:white;
+            font-size: 30px;
+            padding:10px;
+            border:none;
+            background-color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+        #nextBtn    {
+            color:white;
+            font-size: 30px;
+            padding:10px;
+            border:none;
+            background-color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #nextBtn:disabled{
+            opacity: .2;
+        }
+        #prevBtn:disabled{
+            opacity: .2;
+        }
+        h2 {
+         font-size: 1.6em;
+         font-weight: bold;
+         color: rgb(70, 68, 68);
+        }
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+   
+        <div class="excercises">
+            <figure>
+                <div class="excercise-container">
+                    <div class="excercise">
+                        <div class="excercise-image">
+                            <img src="assets/client-images/00.png" alt="">
+                        </div>
+                        <div class="excercise-explanation">
+                          <div>
+                            <h2>Eye Exercises</h2>
+                           <p>
+                            When your eyes get tired and you start feeling the eye strain, 
+                            but still have some work to do, use the Exercises for Eyes. 
+                           </p>
+                           <p>
+                            Regular eye exercises can help you to improve eyesight and prevent eye diseases such as nearsightedness and farsightedness.
+                           </p>
+                           <p> 
+                                Please follow the instruction step by step making twenty-seconds breaks between exercises.
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excercise-container">
+                    <div class="excercise">
+                        <div class="excercise-image">
+                            <img src="assets/client-images/01.png" alt="">
+                        </div>
+                        <div class="excercise-explanation">
+                         <div>
+                            <h2> Gazing Into the Darkness</h2>
+                            <p>
+                             Place your elbows on the table. Then place the palms of your hands over your eyes with the fingers of one hand 
+                             crossing over the fingers on the other hand. Close your eyes and gaze into the darkness. Relax and hold this position for 1-3 minutes.
+                            </p>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="excercise-container">
+                    <div class="excercise">
+                        <div class="excercise-image">
+                            <img src="assets/client-images/02.png" alt="">
+                        </div>
+                        <div class="excercise-explanation">
+                           <div>
+                              <h2>Side to Side Eye Movement</h2>
+                            
+                                <p>
+                                    Stand or sit up right. Look straight ahead. Without moving your head, look to the left. Focus on what you see. Then look to the right.
+                                    Focus on what you see. Move your eyes side to side 5 times. Repeat this cycle 3 times.
+                                </p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="excercise-container">
+                    <div class="excercise">
+                        <div class="excercise-image">
+                            <img src="assets/client-images/03.png" alt="">
+                        </div>
+                        <div class="excercise-explanation">
+                           <div>
+                            <h2>Up and Down Eye Movement</h2>
+                            <p>
+                                Sit up straight and look straight ahead. Then look up and focus on what you see. Look down. Don't be afraid to wrinkle your forehead or frown with your eyebrows. It's good for the eyes. 
+                            Look up and down 5 times. Repeat this cycle 3 times.
+                            </p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excercise-container">
+                    <div class="excercise">
+                        <div class="excercise-image">
+                            <img src="assets/client-images/04.png" alt="">
+                        </div>
+                        <div class="excercise-explanation">
+                           <div>
+                           <h2> Moving Your Eyes Diagonally</h2>
+                            <p>
+                                Look straight ahead. Look down and to the left. 
+                                Then move your eyes diagonally and look up and to the right.
+                                Focus on what you see. 
+                            </p>
+                            <p>
+                                Repeat this exercise 5 times,
+                               then look straight ahead and do the same exercise looking down and to the right and then looking up and to the left. Repeat this cycle 3 times.
+                            </p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excercise-container">
+                    <div class="excercise">
+                        <div class="excercise-image">
+                            <img src="assets/client-images/05.png" alt="">
+                        </div>
+                        <div class="excercise-explanation">
+                           <div>
+                           <h2> Rolling Your Eyes in a Circle</h2>
+                            <p>
+                                Sit up straight and relax. Look to the left and slowly roll your eyes in a circle clockwise. 
+                            To do this look up, 
+                            then slowly move your eyes clockwise and look down and then move your eyes and look to the right.
+
+                            </p>
+                            <p>
+                                Do it clockwise 5 times and then counterclockwise 5 times. Repeat this cycle 3 times.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excercise-container">
+                    <div class="excercise">
+                        <div class="excercise-image">
+                            <img src="assets/client-images/06.png" alt="">
+                        </div>
+                        <div class="excercise-explanation">
+                           <div>
+                            <h2>
+                                Near and Far Focus
+                            </h2>
+                            <p>
+                                Focus on a nearby object, e.g. a pencil.
+                                It should be 20-30 cm away from your eyes. Then look at something 
+                                distant. Focus on that distant object and try to see it in detail. Then look on the nearby object again.
+                            </p>
+                            <p>
+                                Change this focus 5 times. Repeat this cycle 3 times.
+                            </p>
+                           </div>
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excercise-container">
+                    <div class="excercise">
+                        <div class="excercise-image">
+                            <img src="assets/client-images/07.png" alt="">
+                        </div>
+                        <div class="excercise-explanation">
+                            <div>
+                                <h2>
+                                    Concentration One
+                                </h2>
+                                <p>
+                                    Sit up straight. Look straight ahead. Gaze at the point between your eyebrows. Focus on what you see and gaze for a few seconds. Look straight ahead. Then gaze at the point between your eyebrows again. 
+                                    Change this focus 5 times. Repeat this cycle 3 times.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excercise-container">
+                    <div class="excercise">
+                        <div class="excercise-image">
+                            <img src="assets/client-images/08.png" alt="">
+                        </div>
+                        <div class="excercise-explanation">
+                            <div>
+                                <h2>
+                                        Concentration Two
+                                </h2>
+                                <p>
+                                        Sit up straight. Look straight ahead. Gaze at the tip of your nose for a few seconds. Then look straight ahead again.
+                                        Change this focus 5 times. Repeat this cycle 3 times.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="excercise-container">
+                    <div class="excercise">
+                        <div class="excercise-image">
+                            <img src="assets/client-images/09.png" alt="">
+                        </div>
+                        <div class="excercise-explanation">
+                           <div>
+                           <h2> Massage One</h2>
+                            <p>
+                                Close your eyes. Then squeeze your eyes shut tightly. 
+                                Keep them squeezed shut for 2-3 seconds. Relax the muscles around your eyes.
+                                Squeeze your eyes shut again. Repeat 10 times.
+                            </p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="excercise-container">
+                    <div class="excercise">
+                        <div class="excercise-image">
+                            <img src="assets/client-images/10.png" alt="">
+                        </div>
+                        <div class="excercise-explanation">
+                           <div>
+                            <h2>Massage Two</h2>
+                            <p>
+                                Close your eyes. 
+                                Gently touch your eyelids and massage your eyes with circular movements. <span style="font-weight: bold;">Press lightly. Don’t try to press too hard.</span> Make 10 circular movements,
+                                first clockwise then counterclockwise.
+                            </p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+
+        <div class="button1">
+            <button id="prevBtn">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </div>
+
+        <div class="button2">
+            <button id="nextBtn">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <script>
+            const electron = require('electron');
+            const {ipcRenderer} = electron;
+
+
+            const fig = document.querySelector('figure');
+            const nextBtn =  document.querySelector("#nextBtn");
+            const prevBtn = document.querySelector('#prevBtn');
+            let left = 0;
+            let slideLeft;
+            prevBtn.disabled = true;
+            fig.style.left = `${left}`;
+
+            nextBtn.addEventListener('click',()=>{
+               
+                let nextPosition = left;
+                left -= 100;
+
+                prevBtn.disabled = false;
+
+                if(nextPosition>= left-100){
+
+                     slideLeft = setInterval(()=>{
+                        nextPosition-=1;
+                        fig.style.left = `${nextPosition}%`;
+                        nextBtn.disabled = true;
+
+                        if(nextPosition <= left){
+                        clearInterval(slideLeft);
+                            if(left<=-1000){
+                                nextBtn.disabled = true;
+                            }else{
+                                nextBtn.disabled = false;
+                            }
+                        }
+
+                    },1);
+                }
+
+                
+            });
+
+            prevBtn.addEventListener('click',()=>{
+                nextBtn.disabled = false;
+                fig.style.left = `${left}%`;
+
+                let prevPosition = left;
+                left += 100;
+                
+                if(prevPosition<= left+100){
+
+                    slideLeft = setInterval(()=>{
+                        prevPosition++;
+                        fig.style.left = `${prevPosition}%`;
+                        prevBtn.disabled = true;
+                        // console.log('prev: '+prevPosition);
+                        // console.log('left: '+left);
+                        if(prevPosition >= left){
+                        clearInterval(slideLeft);
+                            if(left<0){
+                                prevBtn.disabled = false;
+                            }else{
+                                prevBtn.disabled = true;
+                            }
+                        }
+
+                        },1);
+
+                    }
+            });
+
+        </script>
+</body>
+</html>

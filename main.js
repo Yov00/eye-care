@@ -9,6 +9,8 @@ const logoPath = platform == 'linux' ? '/assets/icon.png' : platform == 'win32' 
 
 const  iconPath = path.join(__dirname,logoPath);
 let mainWindow;
+let excercisesWindow;
+let excercisesOpen = false;
 
 // Creating browser window
 function createWindow(width,height){
@@ -62,6 +64,26 @@ function createWindow(width,height){
     Menu.setApplicationMenu(mainMenu);
 }
 
+function createExcercisesWindow(){
+    excercisesOpen = true;
+    excercisesWindow = new BrowserWindow({
+        width:1000,
+        height:600,
+        resizable:false,
+        webPreferences:{
+            nodeIntegration:true
+        },
+        icon:iconPath
+    });
+
+    excercisesWindow.loadFile('excercises.html');
+
+    excercisesWindow.on('close',()=>{
+        excercisesWindow = null;
+        excercisesOpen = false;
+    });
+}
+
 app.whenReady().then(createWindow);
 
 
@@ -93,23 +115,34 @@ const mainMenuTemplate = [
         ]
         
     },
-    {
-        label:'Developer Tools',
-        submenu:[
-            {
-                label:'Toggle DevTools',
-                accelerator: process.platform == 'darwin' ? `Command+I` : `Ctrl+I`,
+    // {
+    //     label:'Developer Tools',
+    //     submenu:[
+    //         {
+    //             label:'Toggle DevTools',
+    //             accelerator: process.platform == 'darwin' ? `Command+I` : `Ctrl+I`,
 
-                click(item,focusedWindow){
-                    focusedWindow.toggleDevTools();
-                }
-            },
-            {
-                role:`reload`
-            }
-        ]
-    }
+    //             click(item,focusedWindow){
+    //                 focusedWindow.toggleDevTools();
+    //             }
+    //         },
+    //         {
+    //             role:`reload`
+    //         }
+    //     ]
+    // }
 ]
+
+ipcMain.on('excercises:open',()=>{
+    if(excercisesOpen){
+       console.log('it is already open')
+    }else{
+        createExcercisesWindow();
+    }
+
+    excercisesOpen = true;
+    
+});
 
 ipcMain.on('maximize:window',()=>{
     mainWindow.show();
