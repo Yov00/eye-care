@@ -15,7 +15,7 @@ let excercisesOpen = false;
 // Creating browser window
 function createWindow(width,height){
         mainWindow = new BrowserWindow({
-        alwaysOnTop: true,
+        // alwaysOnTop: true,
         width:500,
         height:600,
         resizable:false,
